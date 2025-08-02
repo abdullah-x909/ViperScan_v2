@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(140, 100%, 31%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* ViperScan custom colors */
+  --viper-dark: hsl(0, 0%, 5.9%);
+  --viper-darker: hsl(0, 0%, 3.9%);
+  --viper-gray: hsl(0, 0%, 10.2%);
+  --viper-gray-light: hsl(0, 0%, 16.5%);
+  --viper-green: hsl(140, 100%, 31%);
+  --viper-green-dark: hsl(140, 100%, 25%);
+  --viper-accent: hsl(140, 85%, 64%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--viper-dark);
+    color: var(--foreground);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--viper-gray);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(240, 5%, 34%);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(240, 5%, 44%);
+  }
+
+  .syntax-highlight .method {
+    color: hsl(38, 92%, 50%);
+  }
+
+  .syntax-highlight .url {
+    color: hsl(217, 91%, 60%);
+  }
+
+  .syntax-highlight .header {
+    color: hsl(271, 91%, 65%);
+  }
+
+  .syntax-highlight .value {
+    color: hsl(142, 71%, 45%);
+  }
+
+  .syntax-highlight .status {
+    color: hsl(0, 84%, 60%);
+  }
+
+  .nav-tab.active {
+    background-color: var(--viper-gray-light);
+    color: var(--viper-green);
+  }
+
+  .viper-bg-dark {
+    background-color: var(--viper-dark);
+  }
+
+  .viper-bg-darker {
+    background-color: var(--viper-darker);
+  }
+
+  .viper-bg-gray {
+    background-color: var(--viper-gray);
+  }
+
+  .viper-bg-gray-light {
+    background-color: var(--viper-gray-light);
+  }
+
+  .viper-text-green {
+    color: var(--viper-green);
+  }
+
+  .viper-bg-green {
+    background-color: var(--viper-green);
+  }
+
+  .viper-bg-green-dark {
+    background-color: var(--viper-green-dark);
+  }
+
+  .viper-border-gray-light {
+    border-color: var(--viper-gray-light);
+  }
+}
+
+@layer components {
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: flex;
+  }
+}
